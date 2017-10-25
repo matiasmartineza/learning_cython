@@ -10,10 +10,10 @@ Create a `setup.py` wich will import `setup` & `cythonize` modules from distutil
 
 `setup(ext_modules=cythonize('cfib.pyx'))`
 
-then type `python setup.py build_ext --inplace` as command line to compile and create the shared object file.
+then type `$ python setup.py build_ext --inplace` as command line to compile and create the shared object file.
 
 ## Hand-compiling
 
-Generate the C file using: `cython -a cfib.pyx`
+Generate the C file using: `$ cython -a cfib.pyx`
 
-Generate the shared lib file using gcc: `gcc -shared -fopenmp -pthread -fPIC -fwrapv -O2 -Wall -fno-strict-aliasing  -I/usr/include/python2.7 -o lib.so lib.c`
+Generate the shared lib file using gcc: `$ gcc -shared -fopenmp -pthread -fPIC -fwrapv -O2 -Wall -fno-strict-aliasing  -I/usr/include/python2.7 -o lib.so lib.c`
